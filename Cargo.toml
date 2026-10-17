@@ -3,4 +3,14 @@ name = "jamseq-lv2"
 version = "0.1.0"
 edition = "2024"
 
+[lib]
+crate-type = ["cdylib", "rlib"]
+
 [dependencies]
+jamseq-plugin-api = { path = "../jamseq-plugin-api" }
+lilv = "0.2"
+lv2_raw = "0.2"
+anyhow = "1.0"
+
+[dev-dependencies]
+libloading = "0.8"
